@@ -1,3 +1,5 @@
+from code import*
+from dataloader import*
 import random
 import os
 def main(input_dir, mask_dir,weight_dir,
@@ -36,7 +38,7 @@ def main(input_dir, mask_dir,weight_dir,
     )
     val_gen = Loader(batch_size, img_size, val_input_img_paths, val_mask_img_paths,image_channel,num_classes)
     
-    model=SAC_UWNet((image_height,image_width,image_channel),num_classes, dropout_rate=0.0, batch_norm=True)
+    model=xaw_net((image_height,image_width,image_channel),num_classes, dropout_rate=0.0, batch_norm=True)
 
     model.compile(optimizer='adam',loss='binary_crossentropy',metrics=['accuracy'])
     checkpoint_callback = tf.keras.callbacks.ModelCheckpoint(
