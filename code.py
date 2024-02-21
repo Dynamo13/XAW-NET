@@ -147,5 +147,4 @@ def Attention_UWNet_v2(input_shape, NUM_CLASSES=4, dropout_rate=0.0, batch_norm=
     model = models.Model(inputs, conv_final, name="Attention_UWNet")
     return model
     
-xaw_net=Attention_UWNet_v2((128,128,3),dropout_rate=0.0, batch_norm=True)
-xaw_net.compile(optimizer='adam',loss='categorical_crossentropy',metrics=['accuracy'])
+
