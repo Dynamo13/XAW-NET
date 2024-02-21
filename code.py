@@ -1,5 +1,5 @@
 from keras.models import Model
-from keras.layers import Input, Conv3D, MaxPooling3D, concatenate, Conv3DTranspose, BatchNormalization, Dropout, Lambda
+from keras.layers import Input, concatenate, BatchNormalization, Dropout, Lambda
 from keras.optimizers import Adam
 from keras.metrics import MeanIoU
 import keras.backend as K
